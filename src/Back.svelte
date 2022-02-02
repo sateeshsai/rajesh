@@ -3,9 +3,15 @@
   export let iconColor;
   export let itemIconOpacity;
   export let iconStrokeWidth;
+  export let turn = "right";
+  export let chosenDirection = turn === "right" ? "180deg" : "0deg";
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 412" xml:space="preserve"
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 412 412"
+  xml:space="preserve"
+  style="--direction: {chosenDirection}"
   ><circle cx="206" cy="206" r="206" fill={iconBackgroundColor} fill-opacity={itemIconOpacity} /><path
     fill="none"
     stroke={iconColor}
@@ -19,6 +25,6 @@
 
 <style>
   svg {
-    transform: rotate(180deg);
+    transform: rotate(var(--direction));
   }
 </style>

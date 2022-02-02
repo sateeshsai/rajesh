@@ -1,6 +1,7 @@
 <script>
   import Home from "./Home.svelte";
   import Testimonials from "./Testimonials.svelte";
+  import Tests from "./Tests.svelte";
 
   let active = "home";
 </script>
@@ -9,7 +10,7 @@
   <title>Rajesh Sambu farewell</title>
   <style>
     @import url("https://rsms.me/inter/inter.css");
-    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300&family=Inter:wght@300;900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;700&family=Inter:wght@300;900&display=swap");
   </style>
 </svelte:head>
 
@@ -17,8 +18,9 @@
   {#if active === "home"}
     <Home on:click={() => (active = "testimonials")} />
   {:else}
-    <Testimonials />
+    <Testimonials on:click={() => (active = "home")} />
   {/if}
+  <!-- <Photos /> -->
 </main>
 
 <style>
@@ -32,6 +34,9 @@
     --dColor: #86bc25;
     --footerColor: #9eadbd;
     --accentColor: #7888f3;
+    color: var(--textColor);
+    background: var(--backgroundColorHome);
+    overflow: hidden;
   }
 
   :global(::-webkit-scrollbar) {
@@ -42,5 +47,11 @@
   :global(::-webkit-scrollbar-thumb) {
     background-color: #a5b3c6;
     border-radius: 1rem;
+  }
+
+  main {
+    position: relative;
+    display: grid;
+    grid-template-areas: "main";
   }
 </style>
