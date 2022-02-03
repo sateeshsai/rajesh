@@ -62,7 +62,7 @@
         </div>
       </div>
       {#if showPicframe}
-        <div class="picFrame" on:click={() => (showPicframe = false)}>
+        <div class="picFrame">
           <img transition:fade src={selectedPicSrc} alt="selected" />
           <button class="close" on:click={closePicture}>X</button>
         </div>

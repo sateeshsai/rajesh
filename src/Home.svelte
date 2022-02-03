@@ -43,14 +43,15 @@
   {#each picHolder as pic (pic.id)}
     <div class="largePic" animate:flip in:receive={{ key: pic, duration: 200 }} out:send={{ key: pic, duration: 200 }}>
       <img on:click={() => (showLargePic = true)} src={pic.src} alt="Rajesh's portrait collage" />
-      <div class="byWrapper a"><div class="by name1"><span>By</span> Name 1</div></div>
-      <div class="byWrapper b"><div class="by name2 R"><span>By</span> Name 2</div></div>
-      <div class="byWrapper c"><div class="by name3"><span>By</span> Name 3</div></div>
-      <div class="byWrapper Shweta"><div class="by shweta"><span>By</span> Shweta</div></div>
-      <div class="byWrapper d"><div class="by name4"><span>By</span> Name 5</div></div>
-      <div class="byWrapper e"><div class="by name5"><span>By</span> Name 6</div></div>
-      <div class="byWrapper f"><div class="by name5"><span>By</span> Name 7</div></div>
-      <div class="byWrapper g"><div class="by name5"><span>By</span> Name 8</div></div>
+      <div class="byWrapper a"><div class="by "><span>By</span> Minal</div></div>
+      <div class="byWrapper b"><div class="by  "><span>By</span> Eesha</div></div>
+      <div class="byWrapper c"><div class="by "><span>By</span> Kashyap</div></div>
+      <div class="byWrapper ca"><div class="by "><span>By</span> Nitesh</div></div>
+      <div class="byWrapper Shweta"><div class="by"><span>By</span> Shweta</div></div>
+      <div class="byWrapper d"><div class="by "><span>By</span> Tripti G</div></div>
+      <div class="byWrapper e"><div class="by "><span>By</span> Mohit</div></div>
+      <div class="byWrapper f"><div class="by "><span>By</span> Tripti R</div></div>
+      <div class="byWrapper g"><div class="by "><span>By</span> Rakesh</div></div>
     </div>
   {/each}
   <button class="close" on:click={() => (showLargePic = false)}>X</button>
@@ -178,9 +179,16 @@
 
   .c {
     right: 0%;
+    top: 38%;
+    height: 35%;
+    width: 35%;
+  }
+
+  .ca {
+    right: 35%;
     top: 35%;
     height: 33%;
-    width: 56%;
+    width: 20%;
   }
 
   .d {
