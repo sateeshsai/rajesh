@@ -168,7 +168,7 @@
 
   // $: console.log(items);
 
-  let [minColWidth, maxColWidth, gap] = [300, 900, 50];
+  let [minColWidth, maxColWidth, gap] = [200, 900, 50];
   let width, height;
 </script>
 
